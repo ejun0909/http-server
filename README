@@ -1,0 +1,4 @@
+Notes:
+Socket is unique port/IP to port/IP combo. 
+There is a listening socket. 
+This doesn't work for UDP because there's no concept of a unique socket pair or persistent connection. 
