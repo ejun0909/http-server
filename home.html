@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Internet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .funny-img {
+            width: 200px;
+            height: auto;
+            margin: 20px auto;
+        }
+        .surprise {
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .dancing-text {
+            animation: dance 1s infinite;
+        }
+        @keyframes dance {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            50% { transform: rotate(-10deg); }
+            75% { transform: rotate(5deg); }
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Internet!</h1>
+    <p>This is a place where the unexpected happens.</p>
+
+    <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Dancing Banana" class="funny-img">
+    <p class="surprise">Hover over this text... if you dare!</p>
+    <p id="hover-message" style="display: none;">👻 Boo! Gotcha!</p>
+
+    <h2 class="dancing-text">I'm dancing! 🕺</h2>
+
+    <button onclick="surpriseAlert()">Click me for a surprise</button>
+
+    <script>
+        document.querySelector('.surprise').addEventListener('mouseover', () => {
+            document.getElementById('hover-message').style.display = 'block';
+        });
+
+        function surpriseAlert() {
+            alert("Surprise! Here's your motivational message:\n\nYou can achieve anything if you just believe!");
+        }
+    </script>
+</body>
+</html>
